@@ -378,6 +378,37 @@ body {
 
 .card-text + .card-text { margin-top: 16px; }
 
+/* ─── BULLET LIST (presentation mode) ───────────────── */
+.card-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-bullets li {
+  position: relative;
+  padding-left: 22px;
+  font-size: .93rem;
+  line-height: 1.65;
+  color: var(--text-mid);
+}
+
+.card-bullets li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: .8rem;
+  opacity: .75;
+}
+
+.obj-1 .card-bullets li::before { color: var(--accent1); }
+.obj-2 .card-bullets li::before { color: var(--accent2); }
+.obj-3 .card-bullets li::before { color: var(--accent3); }
+
 .card-insight {
   margin-top: 28px;
   padding: 16px 20px;
